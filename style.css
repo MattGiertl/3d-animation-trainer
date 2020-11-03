@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Poppins, sans-serif";
+    font-family: "Poppins", sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 
 .container {
     /* background: lightblue; */
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,10 +94,10 @@ button.active {
 
 .purchase {
     margin-top: 5rem;
-    transition: all 0.75s ease-out;
 }
 
 .purchase button {
+    transition: all 0.75s ease-out;
     width: 100%;
     padding: 1rem 0rem;
     background: #f54642;
