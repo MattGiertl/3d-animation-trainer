@@ -4,9 +4,9 @@ const container = document.querySelector('.container');
 //Items
 const title = document.querySelector('.title');
 const sneaker = document.querySelector('.sneaker img');
-const purchase = document.querySelector('.p');
-const description = document.querySelector('.title');
-const sizes = document.querySelector('.title');
+const purchase = document.querySelector('.purchase button');
+const description = document.querySelector('.info h3');
+const sizes = document.querySelector('.sizes');
 
 // Moving animation Event
 container.addEventListener('mousemove', (e) => {
@@ -19,10 +19,24 @@ container.addEventListener('mousemove', (e) => {
 // Animate in
 container.addEventListener("mouseenter", e => {
     card.style.transition = 'none';
+
+    //Popout
+    title.style.transform = 'translateZ(150px)'
+    sneaker.style.transform = 'translateZ(200px) rotateZ(-45deg)'
+    description.style.transform = 'translateZ(125px)'
+    sizes.style.transform = 'translateZ(100px)'
+    purchase.style.transform = 'translateZ(75px)'
 })
 
 // Animate out
 container.addEventListener("mouseleave", _ => {
     card.style.transition = 'all 0.5s ease';
     card.style.transform = `rotateY(0deg) rotateX(0deg)`
+
+    //Popin
+    title.style.transform = 'translateZ(0px)'
+    sneaker.style.transform = 'translateZ(0px) rotateZ(0)'
+    description.style.transform = 'translateZ(0px)'
+    sizes.style.transform = 'translateZ(0px)'
+    purchase.style.transform = 'translateZ(0px)'
 })
